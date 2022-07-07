@@ -1,4 +1,9 @@
 module.exports = {
+	'extends': [
+		'../.eslintrc.js',
+		'eslint:recommended',
+		'plugin:react/recommended',
+	],
 	'env': {
 		'browser': true,
 		'jest': true,
@@ -6,10 +11,11 @@ module.exports = {
 	},
 	'parserOptions': {
 		'sourceType': 'module',
+		'allowImportExportEverywhere': true,
 	},
-	'extends': [
-		'../.eslintrc.js',
-		'eslint:recommended',
-		'plugin:react/recommended',
-	],
+	'settings': {
+		'react': {
+			'version': 'detect',
+		},
+	},
 };
